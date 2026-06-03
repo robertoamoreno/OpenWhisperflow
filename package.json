@@ -44,7 +44,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.69.0",
     "@electron-toolkit/utils": "^4.0.0",
-    "@vitejs/plugin-react": "^5.1.1",
+    "@vitejs/plugin-react": "^6.0.2",
     "better-sqlite3": "^12.5.0",
     "electron-store": "^11.0.2",
     "keytar": "^7.9.0",
