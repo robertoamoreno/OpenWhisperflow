@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest an improvement for OpenWhisperflow
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What workflow should this improve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: What should OpenWhisperflow do?
+    validations:
+      required: true
+  - type: dropdown
+    id: privacy
+    attributes:
+      label: Privacy impact
+      options:
+        - No new data leaves the device
+        - Sends more text/audio/screen context to a configured provider
+        - Stores more local data
+        - Unsure
+    validations:
+      required: true

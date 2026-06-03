@@ -1,0 +1,65 @@
+{
+  "name": "openwhisperflow",
+  "version": "0.1.0",
+  "description": "Privacy-first macOS voice dictation and text transformation app.",
+  "main": "./out/main/index.js",
+  "type": "module",
+  "author": "Roberto Moreno",
+  "license": "MIT",
+  "homepage": "https://github.com/robertoamoreno/OpenWhisperflow#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertoamoreno/OpenWhisperflow.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robertoamoreno/OpenWhisperflow/issues"
+  },
+  "keywords": [
+    "macos",
+    "electron",
+    "dictation",
+    "speech-to-text",
+    "asr",
+    "anthropic",
+    "together-ai",
+    "whisperkit",
+    "privacy"
+  ],
+  "scripts": {
+    "dev": "electron-vite dev",
+    "rebuild:native": "npm_config_runtime=electron npm_config_target=39.2.6 npm_config_disturl=https://electronjs.org/headers npm rebuild better-sqlite3 keytar",
+    "build": "npm run typecheck && electron-vite build",
+    "preview": "electron-vite preview",
+    "typecheck": "tsc --noEmit",
+    "build:hotkey-helper": "node scripts/build-hotkey-helper.js",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "engines": {
+    "node": ">=20.19"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.69.0",
+    "@electron-toolkit/utils": "^4.0.0",
+    "@vitejs/plugin-react": "^5.1.1",
+    "better-sqlite3": "^12.5.0",
+    "electron-store": "^11.0.2",
+    "keytar": "^7.9.0",
+    "lucide-react": "^0.555.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "zod": "^4.1.13"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitest/ui": "^4.0.14",
+    "electron": "^39.2.6",
+    "electron-vite": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4",
+    "vitest": "^4.0.14"
+  }
+}
