@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024" role="img" aria-label="OpenWhisperflow app icon">
+  <defs>
+    <linearGradient id="bg" x1="147" y1="75" x2="877" y2="947" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f766e"/>
+      <stop offset="0.52" stop-color="#0d9488"/>
+      <stop offset="1" stop-color="#14b8a6"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="290" y1="189" x2="742" y2="821" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbfffe"/>
+      <stop offset="1" stop-color="#ddf7f2"/>
+    </linearGradient>
+    <linearGradient id="flow" x1="234" y1="622" x2="790" y2="622" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb35c"/>
+      <stop offset="0.48" stop-color="#fff7ed"/>
+      <stop offset="1" stop-color="#73cff5"/>
+    </linearGradient>
+    <filter id="panelShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="36" stdDeviation="34" flood-color="#064e3b" flood-opacity="0.34"/>
+    </filter>
+    <filter id="markShadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#064e3b" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1024" height="1024" rx="226" fill="url(#bg)"/>
+  <rect x="44" y="38" width="936" height="948" rx="205" fill="none" stroke="#6ee7d8" stroke-width="7" opacity="0.34"/>
+  <rect x="78" y="72" width="868" height="880" rx="176" fill="none" stroke="#064e3b" stroke-width="16" opacity="0.22"/>
+
+  <rect x="206" y="164" width="612" height="660" rx="148" fill="url(#panel)" filter="url(#panelShadow)"/>
+  <circle cx="298" cy="270" r="33" fill="#ffb35c"/>
+  <circle cx="732" cy="748" r="37" fill="#73cff5"/>
+  <circle cx="759" cy="291" r="15" fill="#ffffff" opacity="0.78"/>
+
+  <path d="M242 626C286 570 330 570 374 626C418 682 462 682 506 626C550 570 594 570 638 626C682 682 726 682 782 626" fill="none" stroke="url(#flow)" stroke-width="42" stroke-linecap="round" opacity="0.96"/>
+  <path d="M242 626C286 570 330 570 374 626C418 682 462 682 506 626C550 570 594 570 638 626C682 682 726 682 782 626" fill="none" stroke="#064e3b" stroke-width="13" stroke-linecap="round" opacity="0.44"/>
+
+  <g filter="url(#markShadow)">
+    <rect x="400" y="230" width="224" height="365" rx="112" fill="#0f766e"/>
+    <rect x="462" y="306" width="100" height="224" rx="50" fill="#fbfffe"/>
+    <rect x="488" y="340" width="48" height="156" rx="24" fill="#0d9488"/>
+    <path d="M346 462V510C346 602 420 676 512 676C604 676 678 602 678 510V462" fill="none" stroke="#0f766e" stroke-width="58" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M512 676V724" fill="none" stroke="#0f766e" stroke-width="58" stroke-linecap="round"/>
+    <rect x="388" y="716" width="248" height="64" rx="32" fill="#0f766e"/>
+  </g>
+</svg>

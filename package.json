@@ -32,6 +32,9 @@
     "preview": "electron-vite preview",
     "typecheck": "tsc --noEmit",
     "build:hotkey-helper": "node scripts/build-hotkey-helper.js",
+    "pack:mac": "npm run build:hotkey-helper && npm run build && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac --dir",
+    "dist:mac": "npm run build:hotkey-helper && npm run build && CSC_IDENTITY_AUTO_DISCOVERY=false electron-builder --mac dmg",
+    "release:mac": "npm run build:hotkey-helper && npm run build && electron-builder --mac dmg --publish always",
     "test": "vitest run",
     "test:watch": "vitest"
   },
@@ -57,6 +60,7 @@
     "@types/react-dom": "^19.2.3",
     "@vitest/ui": "^4.0.14",
     "electron": "^39.2.6",
+    "electron-builder": "^26.8.1",
     "electron-vite": "^4.0.0",
     "typescript": "^5.9.3",
     "vite": "^7.2.4",

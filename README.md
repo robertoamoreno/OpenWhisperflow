@@ -32,6 +32,7 @@ OpenWhisperflow is opt-in by design:
 
 See [docs/PERMISSIONS.md](docs/PERMISSIONS.md) for the detailed permissions model.
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for a short codebase map.
+See [docs/RELEASE.md](docs/RELEASE.md) for DMG build and GitHub Release instructions.
 
 ## Requirements
 
@@ -75,6 +76,8 @@ npm run dev                 # start Electron + Vite
 npm run typecheck           # TypeScript checks
 npm test                    # unit tests
 npm run build               # production build
+npm run dist:mac            # local unsigned macOS DMG in release/
+npm run release:mac         # build and publish through electron-builder
 npm run rebuild:native      # rebuild native Node modules for Electron
 npm run build:hotkey-helper # build the optional Swift helper on macOS
 ```

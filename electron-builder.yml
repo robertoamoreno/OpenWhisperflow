@@ -1,0 +1,48 @@
+appId: com.robertoamoreno.openwhisperflow
+productName: OpenWhisperflow
+copyright: Copyright © 2026 Roberto Moreno
+
+directories:
+  output: release
+  buildResources: build
+
+asar: true
+
+files:
+  - out/**/*
+  - package.json
+
+extraResources:
+  - from: resources/bin/openwhisperflow-hotkey-helper
+    to: bin/openwhisperflow-hotkey-helper
+
+mac:
+  category: public.app-category.productivity
+  icon: build/icon.icns
+  hardenedRuntime: true
+  gatekeeperAssess: false
+  entitlements: build/entitlements.mac.plist
+  entitlementsInherit: build/entitlements.mac.inherit.plist
+  target:
+    - dmg
+  extendInfo:
+    NSMicrophoneUsageDescription: OpenWhisperflow uses the microphone only while you are recording dictation.
+    NSScreenCaptureUsageDescription: OpenWhisperflow can optionally attach a current-screen thumbnail to LLM-backed dictation modes when you enable screen context.
+    NSAppleEventsUsageDescription: OpenWhisperflow can use System Events to paste generated text into the focused application.
+
+dmg:
+  artifactName: ${productName}-${version}-${arch}.${ext}
+  sign: false
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
+publish:
+  provider: github
+  owner: robertoamoreno
+  repo: OpenWhisperflow
+  releaseType: release
